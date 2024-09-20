@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/pizza-restaurant-php
+
+hooks:
+  BeforeInstall:
+    - location: /install_dependencies.sh
+      runas: root
+  AfterInstall:
+    - location: /restart_server.sh
+      runas: root
