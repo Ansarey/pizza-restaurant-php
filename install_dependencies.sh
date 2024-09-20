@@ -1,3 +1,2 @@
 #!/bin/bash
-apt-get update
-apt-get install -y apache2
+sudo systemctl apache2 stop
